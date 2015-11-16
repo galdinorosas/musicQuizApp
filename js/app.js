@@ -239,7 +239,7 @@ $(document).ready(function() {
 			$(".questionAndAnswerContainer").fadeIn(800);
 		});
 	
-		$("#songPlaying").prop("src","sound/reptilia.mp3");
+		$("#songPlaying").prop("src","sound/Reptilia.mp3");
 
 		$("#songPlaying")[0].volume=0.5;
 		$("#songPlaying")[0].load();
