@@ -120,13 +120,12 @@ $(document).ready(function() {
 	// Submit button functionality during the question/answer screen.
 	$(".submitButton").on("click",function(){
 
-		if(index>5){
+		// This will uncheck all the radio buttons after the user clicks submit.
 
-
-		
-
-		}
-
+		$("#option1").attr("checked", false);
+		$("#option2").prop("checked", false);
+		$("#option3").prop("checked", false);
+		$("#option4").prop("checked", false);
 
 		if(index < 6){
 			$(".visibleQuestion").text(questionsAndAnswers[index].question);
@@ -138,12 +137,6 @@ $(document).ready(function() {
 
 		}
 
-
-
-
-
-
-
 		if($("#option1").is(":checked") && questionsAndAnswers[index-1].optionOne == questionsAndAnswers[index-1].answer){
 
 			correctAnswers++;
@@ -152,18 +145,18 @@ $(document).ready(function() {
 
 		else if($("#option2").is(":checked") && questionsAndAnswers[index-1].optionTwo == questionsAndAnswers[index-1].answer){
 
-				correctAnswers++;
+			correctAnswers++;
 
 		}
 
 		else if($("#option3").is(":checked") && questionsAndAnswers[index-1].optionThree == questionsAndAnswers[index-1].answer){
 
-				correctAnswers++;
+			correctAnswers++;
 		}		
 
 		else if($("#option4").is(":checked") && questionsAndAnswers[index-1].optionFour == questionsAndAnswers[index-1].answer){
 
-				correctAnswers++;
+			correctAnswers++;
 
 		}
 
@@ -212,19 +205,6 @@ $(document).ready(function() {
 			});
 
 		}
-
-
-
-		// This will uncheck all the radio buttons after the user clicks submit.
-
-		$("#option1").attr("checked", false);
-		$("#option2").prop("checked", false);
-		$("#option3").prop("checked", false);
-		$("#option4").prop("checked", false);
-
-
-
-
 
 	});
 

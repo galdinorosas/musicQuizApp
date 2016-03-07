@@ -7,6 +7,12 @@
 
 /*digital-7.regular.ttf*/
 
+/*This disables the focus outline on all button clicks.*/
+
+button:focus, input:focus{
+    outline: 0;
+}
+
 @font-face {
     font-family: "digital";
     src: url(digital-7.regular.ttf);
