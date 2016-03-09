@@ -1,15 +1,5 @@
-/*html {
-  box-sizing: border-box;
-}
-*, *:before, *:after {
-  box-sizing: inherit;
-}*/
-
-/*digital-7.regular.ttf*/
-
-/*This disables the focus outline on all button clicks.*/
-
-button:focus, input:focus{
+button:focus,
+input:focus {
     outline: 0;
 }
 
@@ -18,182 +8,144 @@ button:focus, input:focus{
     src: url(digital-7.regular.ttf);
 }
 
-.topBarContainer, .topBarCentered,.questionNumber, .timeLength{
-
-	height: 3em;
+.topBarContainer,
+.topBarCentered,
+.questionNumber,
+.timeLength {
+    height: 3em;
 }
 
-.topBarContainer{
-
-	width: 100%;
-	background-color: black;
+.topBarContainer {
+    width: 100%;
+    background-color: black;
 }
 
-.topBarCentered{
-
-	width:53em;
-	background-color: #9b9999;
-	margin: 0 auto;
-	z-index: 1000;
-
-
+.topBarCentered {
+    width: 53em;
+    background-color: #9b9999;
+    margin: 0 auto;
+    z-index: 1000;
 }
 
-.questionNumber, .timeLength, ul{
-
-	float: left;
+.questionNumber,
+.timeLength,
+ul {
+    float: left;
 }
 
-.questionNumber, .timeLength{
-
-	width: 5em;
-	background-color: #9b9999;
+.questionNumber,
+.timeLength {
+    width: 5em;
+    background-color: #9b9999;
 }
 
-.questionNumber{
-	margin-right:19em;
-	text-align: center;
-	vertical-align: middle;
-	line-height: 3em;
-	font-family: "digital","monospace","serif";
+.questionNumber {
+    margin-right: 19em;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 3em;
+    font-family: "digital", "monospace", "serif";
 }
 
-.timeLength{
-
-	text-align: center;
-	vertical-align: middle;
-	line-height: 3em;
-	font-family: "digital","monospace","serif";
-
+.timeLength {
+    text-align: center;
+    vertical-align: middle;
+    line-height: 3em;
+    font-family: "digital", "monospace", "serif";
 }
 
-.timer,.currentQuestion{
-	font-size: 1.5em;
+.timer,
+.currentQuestion {
+    font-size: 1.5em;
 }
 
-.topBarButtonsContainer{
-
-	list-style-type: none;
-	background-color: #9b9999;
-	border: 0;
-	padding: 0;
-	height: 3em;
-	float: right;
-
+.topBarButtonsContainer {
+    list-style-type: none;
+    background-color: #9b9999;
+    border: 0;
+    padding: 0;
+    height: 3em;
+    float: right;
 }
 
-.topBarButtonsContainer>li{
-	height: 3em;
-	width: 5em;
-	display: inline-block;
-
+.topBarButtonsContainer>li {
+    height: 3em;
+    width: 5em;
+    display: inline-block;
 }
 
-
-
-/*button{
-	height: 100%;
-	width: 100%;
-	border: 0;
-	padding: 0;
-	background-color: #9b9999;
-
-}*/
-
-.playImage, .pauseImage, .optionsImage{
-	height:2em;
-
+.playImage,
+.pauseImage,
+.optionsImage {
+    height: 2em;
 }
 
-.playButton, .pauseButton, .optionsButton{
-	height: 100%;
-	width: 100%;
-	border: 0;
-	padding: 0;
-	background-color: #9b9999;
-	border-bottom: 0.25em solid #9b9999;
-	transition: border 0.3s linear 0s;
+.playButton,
+.pauseButton,
+.optionsButton {
+    height: 100%;
+    width: 100%;
+    border: 0;
+    padding: 0;
+    background-color: #9b9999;
+    border-bottom: 0.25em solid #9b9999;
+    transition: border 0.3s linear 0s;
 }
 
-.playButton:hover{
-
-	border-bottom: 0.25em solid red;
+.playButton:hover {
+    border-bottom: 0.25em solid red;
 }
 
-.pauseButton:hover{
-
-	border-bottom: 0.25em solid blue;
+.pauseButton:hover {
+    border-bottom: 0.25em solid blue;
 }
 
-.optionsButton:hover{
-
-	border-bottom: 0.25em solid yellow;
+.optionsButton:hover {
+    border-bottom: 0.25em solid yellow;
 }
 
-.bodyContainer{
-
-	width: 100%;
-	height: 50em;
-	background-color: black;
+.bodyContainer {
+    width: 100%;
+    height: 50em;
+    background-color: black;
 }
 
-.contentContainer{
-
-	width: 53em;
-	background-color: #9b9999;
-	margin: 0 auto;
-	height: 47em;
+.contentContainer {
+    width: 53em;
+    background-color: #9b9999;
+    margin: 0 auto;
+    height: 47em;
     border-bottom-right-radius: 30px;
     border-bottom-left-radius: 30px;
-
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.introStartGameContainer{
-	z-index: 100;
-	display: block;
-	width: 40em;
-	height: 20em;
-	background-color: black;
-	margin: 0 auto;
-
-	/*I am able to center links abd buttons like with text0aline and not margin. margin is more for divs.*/
+.introStartGameContainer {
+    z-index: 100;
+    display: block;
+    width: 40em;
+    height: 20em;
+    background-color: black;
+    margin: 0 auto;
     text-align: center;
-
-	position: relative;
+    position: relative;
     top: 20%;
     border-radius: 80px;
     border: green 0.4em double;
-
 }
 
-.introMessageContainer{
-
-	height: 10em;
-	width: 35em;
-	background-color: black;
-	margin: 0 auto;
-	margin-bottom: 2.5em;
-	border-top: black 1em solid;
-	text-align: center;
-	vertical-align: middle;
-	line-height: 3em;
-	border-radius: 75px;
-
+.introMessageContainer {
+    height: 10em;
+    width: 35em;
+    background-color: black;
+    margin: 0 auto;
+    margin-bottom: 2.5em;
+    border-top: black 1em solid;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 3em;
+    border-radius: 75px;
 }
+
 
 /*.startGameButton{
 
@@ -206,72 +158,55 @@ button:focus, input:focus{
 
 }*/
 
-.startGameButton{
-
-	width: 10em;
+.startGameButton {
+    width: 10em;
     height: 3em;
     background-color: #9b9999;
     padding: 0.75em 0.66em;
     font-size: 1em;
     border: 0;
-    font-family: "Audiowide","Lobster","serif";
+    font-family: "Audiowide", "Lobster", "serif";
     border-radius: 3px;
     transition: background-color 0.3s linear 0s, color 0.3s linear 0s;
 }
 
-.startGameButton:hover{
-
-	background-color: green;
-	color: #9b9999;
+.startGameButton:hover {
+    background-color: green;
+    color: #9b9999;
 }
 
-.introMessage{
-	color: #9b9999;
-	font-family: "Audiowide","Lobster","serif";
-	font-size: 3em;
-	position: relative;
-	top: 20%;
-
+.introMessage {
+    color: #9b9999;
+    font-family: "Audiowide", "Lobster", "serif";
+    font-size: 3em;
+    position: relative;
+    top: 20%;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-.questionAndAnswerContainer{
-	display: none;
-	width: 45em;
+.questionAndAnswerContainer {
+    display: none;
+    width: 45em;
     height: 41em;
     background-color: #2a58b2;
-	margin: 0 auto;
-	position: relative;
+    margin: 0 auto;
+    position: relative;
     top: 4%;
     border-radius: 40px;
 }
 
-.questionContainer{
-
-	width: 29em;
-	height: 9em;
-	margin: 0 auto;
-	background: linear-gradient(#3a499e, lightblue);
-	position: relative;
+.questionContainer {
+    width: 29em;
+    height: 9em;
+    margin: 0 auto;
+    background: linear-gradient(#3a499e, lightblue);
+    position: relative;
     top: 4%;
     text-align: center;
     font-size: 1.5em;
     border-radius: 40px;
-  
 }
 
-.questionContainer>p{
-
+.questionContainer>p {
     line-height: 170%;
     position: relative;
     top: 26%;
@@ -280,75 +215,48 @@ button:focus, input:focus{
     letter-spacing: 0.2px;
 }
 
-
-
-.inputContainer{
-
-	width: 25em;
-	height: 15em;
-	margin: 0 auto;
-	position: relative;
-	top: 8%;
+.inputContainer {
+    width: 25em;
+    height: 15em;
+    margin: 0 auto;
+    position: relative;
+    top: 8%;
 }
 
-/*.answersList{
-
-	float: right;
-	margin-right: 4em;
-	
-}*/
-
-.answersList>li{
-	display: inline-block;
-	width: 15em;
-	height: 2.5em;
-	background-color: rgba(153,153,153,0.5);
-	text-align: center;
-	vertical-align: middle;
+.answersList>li {
+    display: inline-block;
+    width: 15em;
+    height: 2.5em;
+    background-color: rgba(153, 153, 153, 0.5);
+    text-align: center;
+    vertical-align: middle;
     line-height: 2.5em;
     margin: 0.5em 0 1em 2em;
     border-radius: 40px;
     cursor: pointer;
-
-
- 
-
 }
 
-li>p{
-	font-weight: bold;
+li>p {
+    font-weight: bold;
     color: #000000;
-	font-family: 'EB Garamond', serif;
-	letter-spacing: 0.5px;
+    font-family: 'EB Garamond', serif;
+    letter-spacing: 0.5px;
 }
 
-.userInput{
-	width: 20em;
-	height: 15em;
-	margin-left: 2em;
-
+.userInput {
+    width: 20em;
+    height: 15em;
+    margin-left: 2em;
 }
 
-/*.answerOption{
-
-	width: 2em;
-	height: 2em;
-}*/
-
-.answersList>input { 
-    transform: scale(1.5,1.5);
+.answersList>input {
+    transform: scale(1.5, 1.5);
     display: inline-block;
     cursor: pointer;
-/*-moz-transform: scale(2,2,2); 
--ms-transform: scale(2,2,2); 
--webkit-transform: scale(2,2,2); 
--o-transform: scale(2,2,2); */
-
 }
 
-.submitButton{
-
-	width: 10em;
+.submitButton {
+    width: 10em;
     height: 3em;
     background-color: yellow;
     padding: 0.75em 0.66em;
@@ -363,102 +271,60 @@ li>p{
     transition: background-color 0.3s linear 0s, color 0.3s linear 0s;
 }
 
-.submitButton:hover{
-
-	background-color: red;
-	color: yellow;
+.submitButton:hover {
+    background-color: red;
+    color: yellow;
 }
 
-
-
-
-
-#option4{
-	position: relative;
+#option4 {
+    position: relative;
     bottom: 7%;
 }
 
-#option3{
-	position: relative;
+#option3 {
+    position: relative;
     bottom: 6.5%;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.optionsContainer{
-	z-index: 500;
+.optionsContainer {
+    z-index: 500;
     display: none;
     width: 53em;
     height: 30em;
     background-color: yellow;
     text-align: center;
-    /* bottom: -13.8%; */
     top: 3em;
     position: absolute;
 }
 
-.optionsTitle{
-	width: 7em;
-	margin: 0;
-	font-family: "Audiowide","Lobster","serif";
-	font-size: 3em;
-	border: black solid 0.2em;
-	text-align: center;
-	margin: 0 auto;
-	position: relative;
-	top: 10%;
-	color: black;
+.optionsTitle {
+    width: 7em;
+    margin: 0;
+    font-family: "Audiowide", "Lobster", "serif";
+    font-size: 3em;
+    border: black solid 0.2em;
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+    top: 10%;
+    color: black;
 }
 
-.instructionMessage{
-
-	font-family: "Audiowide","Lobster","serif";
-	font-size: 2em;
-	text-align: center;
-	position: relative;
-	top: 20%;
-
+.instructionMessage {
+    font-family: "Audiowide", "Lobster", "serif";
+    font-size: 2em;
+    text-align: center;
+    position: relative;
+    top: 20%;
 }
 
-.newGameButton{
-
-	width: 10em;
+.newGameButton {
+    width: 10em;
     height: 3em;
     background-color: yellow;
     padding: 0.75em 0.66em;
     font-size: 1em;
-    font-family: "Audiowide","Lobster","serif";
+    font-family: "Audiowide", "Lobster", "serif";
     margin: 0 auto;
     position: relative;
     top: 11em;
@@ -467,40 +333,24 @@ li>p{
     transition: background-color 0.3s linear 0s, color 0.3s linear 0s;
 }
 
-.newGameButton:hover{
-
-	background-color: red;
-	color: yellow;
+.newGameButton:hover {
+    background-color: red;
+    color: yellow;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.endContainer{
-	display: none;
-	border-radius: 25px;
+.endContainer {
+    display: none;
+    border-radius: 25px;
     position: relative;
     top: 18%;
     margin: 0 auto;
     width: 40em;
     height: 25em;
     background-color: black;
-
 }
 
-h1{
-	color: white;
+h1 {
+    color: white;
     letter-spacing: 0.09em;
     font-family: 'EB Garamond', serif;
     font-size: 2.5em;
@@ -512,8 +362,7 @@ h1{
     text-align: center;
 }
 
-.endContainer>p{
-
+.endContainer>p {
     font-family: 'EB Garamond', serif;
     color: white;
     width: 25em;
@@ -522,20 +371,15 @@ h1{
     top: 35%;
     text-align: center;
     font-size: 1.5em;
-
 }
 
-#endButton{
-
+#endButton {
     position: relative;
     top: 15em;
     left: 15em;
 }
 
-#quizTime, #totalCorrectAnswers{
-	font-size: 1.5em;
+#quizTime,
+#totalCorrectAnswers {
+    font-size: 1.5em;
 }
-
-
-
-
