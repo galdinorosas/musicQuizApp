@@ -383,11 +383,12 @@ h1 {
   li > p {
     font-weight: bold; }
   .endContainer {
-    width: 35em; }
+    width: 42.5em;
+    height: 28em; }
     .endContainer h1 {
-      font-size: 2em; }
+      font-size: 2.75em; }
     .endContainer p {
-      font-size: 1.3em; }
+      font-size: 1.75em; }
     .endContainer #endButton {
       top: 4em;
       left: 13.5em; }
@@ -401,4 +402,5 @@ h1 {
     font-size: 1.5em; }
   .newGameButton {
     width: 10em;
-    height: 3.5em; } }
+    height: 3.5em;
+    margin: 9em 0em 0em 3em; } }
