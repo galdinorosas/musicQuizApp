@@ -90,7 +90,7 @@ $(document).ready(function() {
         $("#songPlaying")[0].load();
         $("#songPlaying")[0].play();
 
-    };
+    }
 
     var correctAnswers = 0;
     var index = 1;
@@ -98,81 +98,75 @@ $(document).ready(function() {
     // Submit button functionality during the question/answer screen.
     $(".submitButton").on("click", function() {
 
-    	if($('ul input').is(':checked')){
-			if (index < 6) {
-	            $(".visibleQuestion").text(questionsAndAnswers[index].question);
-	            $(".text1").text(questionsAndAnswers[index].optionOne);
-	            $(".text2").text(questionsAndAnswers[index].optionTwo);
-	            $(".text3").text(questionsAndAnswers[index].optionThree);
-	            $(".text4").text(questionsAndAnswers[index].optionFour);
-	        }
+        if ($('ul input').is(':checked')) {
+            if (index < 6) {
+                $(".visibleQuestion").text(questionsAndAnswers[index].question);
+                $(".text1").text(questionsAndAnswers[index].optionOne);
+                $(".text2").text(questionsAndAnswers[index].optionTwo);
+                $(".text3").text(questionsAndAnswers[index].optionThree);
+                $(".text4").text(questionsAndAnswers[index].optionFour);
+            }
 
-	        if ($("#option1").is(":checked") && questionsAndAnswers[index - 1].optionOne === questionsAndAnswers[index - 1].answer) {
+            if ($("#option1").is(":checked") && questionsAndAnswers[index - 1].optionOne === questionsAndAnswers[index - 1].answer) {
 
-	            correctAnswers++;
+                correctAnswers++;
 
-	        } else if ($("#option2").is(":checked") && questionsAndAnswers[index - 1].optionTwo === questionsAndAnswers[index - 1].answer) {
+            } else if ($("#option2").is(":checked") && questionsAndAnswers[index - 1].optionTwo === questionsAndAnswers[index - 1].answer) {
 
-	            correctAnswers++;
+                correctAnswers++;
 
-	        } else if ($("#option3").is(":checked") && questionsAndAnswers[index - 1].optionThree === questionsAndAnswers[index - 1].answer) {
+            } else if ($("#option3").is(":checked") && questionsAndAnswers[index - 1].optionThree === questionsAndAnswers[index - 1].answer) {
 
-	            correctAnswers++;
-	        } else if ($("#option4").is(":checked") && questionsAndAnswers[index - 1].optionFour === questionsAndAnswers[index - 1].answer) {
+                correctAnswers++;
+            } else if ($("#option4").is(":checked") && questionsAndAnswers[index - 1].optionFour === questionsAndAnswers[index - 1].answer) {
 
-	            correctAnswers++;
-	        }
+                correctAnswers++;
+            }
 
-	        index++;
+            index++;
 
-	        $("#currentQuestionNumber").text(index);
+            $("#currentQuestionNumber").text(index);
 
-	        // The code below will play the song related to the question.
-	        switch (index) {
-	            case 2:
-	                songFunction("sound/citizenErased.mp3");
-	                break;
-	            case 3:
-	                songFunction("sound/hellaGood.mp3");
-	                break;
-	            case 4:
-	                songFunction("sound/sweatpants.mp3");
-	                break;
-	            case 5:
-	                songFunction("sound/straightOuttaCompton.mp3");
-	                break;
-	            case 6:
-	                // This will have the question/answer screen dissapear and the end screen display.
-	                quizLength = $(".timer").runner("lap");
-	                $(".timer").runner("reset", true);
+            // The code below will play the song related to the question.
+            switch (index) {
+                case 2:
+                    songFunction("sound/citizenErased.mp3");
+                    break;
+                case 3:
+                    songFunction("sound/hellaGood.mp3");
+                    break;
+                case 4:
+                    songFunction("sound/sweatpants.mp3");
+                    break;
+                case 5:
+                    songFunction("sound/straightOuttaCompton.mp3");
+                    break;
+                case 6:
+                    // This will have the question/answer screen dissapear and the end screen display.
+                    quizLength = $(".timer").runner("lap");
+                    $(".timer").runner("reset", true);
 
-	                console.log(quizLength);
+                    console.log(quizLength);
 
-	                $("#currentQuestionNumber").text("DONE");
-	                $("#quizTime").text(quizLength);
+                    $("#currentQuestionNumber").text("DONE");
+                    $("#quizTime").text(quizLength);
 
-	                $(".questionAndAnswerContainer").fadeOut(800, function() {
-	                    $("#totalCorrectAnswers").text(correctAnswers + "/5");
-	                    $(".endContainer").fadeIn(800);
-	                });
-	                break;
-	        }
+                    $(".questionAndAnswerContainer").fadeOut(800, function() {
+                        $("#totalCorrectAnswers").text(correctAnswers + "/5");
+                        $(".endContainer").fadeIn(800);
+                    });
+                    break;
+            }
 
-	        // This will uncheck all the radio buttons after the user clicks submit.
-	        $("#option1").prop("checked", false);
-	        $("#option2").prop("checked", false);
-	        $("#option3").prop("checked", false);
-	        $("#option4").prop("checked", false);
+            // This will uncheck all the radio buttons after the user clicks submit.
+            $("#option1").prop("checked", false);
+            $("#option2").prop("checked", false);
+            $("#option3").prop("checked", false);
+            $("#option4").prop("checked", false);
 
-    	}
-    	else{
-    		return
-    	}
-
-        
-        
-
-
+        } else {
+            return;
+        }
     });
 
     // The start game button will display the question/answer screen and start to play music.
@@ -220,11 +214,7 @@ $(document).ready(function() {
         $("#songPlaying")[0].pause();
         $("#currentQuestionNumber").text("#");
 
-
     });
-
-
-
 
     // This code is to allow the user to click on the answer box to check the radio button.
     $("#answerOne").on("click", function(event) {
@@ -250,10 +240,5 @@ $(document).ready(function() {
         $("#option4").prop("checked", true);
 
     });
-
-
-
-
-
 
 });

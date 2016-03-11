@@ -21,7 +21,7 @@ input:focus {
 }
 
 .topBarCentered {
-    width: 53em;
+    width: 27.5em;
     background-color: #9b9999;
     margin: 0 auto;
     z-index: 1000;
@@ -40,7 +40,7 @@ ul {
 }
 
 .questionNumber {
-    margin-right: 19em;
+    margin-right: 4em;
     text-align: center;
     vertical-align: middle;
     line-height: 3em;
@@ -70,7 +70,7 @@ ul {
 
 .topBarButtonsContainer>li {
     height: 3em;
-    width: 5em;
+    width: 4em;
     display: inline-block;
 }
 
@@ -106,15 +106,15 @@ ul {
 
 .bodyContainer {
     width: 100%;
-    height: 50em;
+    height: 40em;
     background-color: black;
 }
 
 .contentContainer {
-    width: 53em;
+    width: 27.5em;
     background-color: #9b9999;
     margin: 0 auto;
-    height: 47em;
+    height: 37em;
     border-bottom-right-radius: 30px;
     border-bottom-left-radius: 30px;
 }
@@ -122,20 +122,20 @@ ul {
 .introStartGameContainer {
     z-index: 100;
     display: block;
-    width: 40em;
+    width: 25em;
     height: 20em;
     background-color: black;
     margin: 0 auto;
     text-align: center;
     position: relative;
-    top: 20%;
+    top: 10%;
     border-radius: 80px;
     border: green 0.4em double;
 }
 
 .introMessageContainer {
     height: 10em;
-    width: 35em;
+    width: 25em;
     background-color: black;
     margin: 0 auto;
     margin-bottom: 2.5em;
@@ -147,7 +147,7 @@ ul {
 }
 
 .startGameButton {
-    width: 10em;
+    width: 8em;
     height: 3em;
     background-color: #9b9999;
     padding: 0.75em 0.66em;
@@ -166,15 +166,15 @@ ul {
 .introMessage {
     color: #9b9999;
     font-family: "Audiowide", "Lobster", "serif";
-    font-size: 3em;
+    font-size: 2em;
     position: relative;
     top: 20%;
 }
 
 .questionAndAnswerContainer {
     display: none;
-    width: 45em;
-    height: 41em;
+    width: 26em;
+    height: 33em;
     background-color: #2a58b2;
     margin: 0 auto;
     position: relative;
@@ -183,14 +183,14 @@ ul {
 }
 
 .questionContainer {
-    width: 29em;
-    height: 9em;
+    width: 22em;
+    height: 6.5em;
     margin: 0 auto;
     background: linear-gradient(#3a499e, lightblue);
     position: relative;
     top: 4%;
     text-align: center;
-    font-size: 1.5em;
+    font-size: 1em;
     border-radius: 40px;
 }
 
@@ -225,7 +225,6 @@ ul {
 }
 
 li>p {
-    font-weight: bold;
     color: #000000;
     font-family: 'EB Garamond', serif;
     letter-spacing: 0.5px;
@@ -238,22 +237,21 @@ li>p {
 }
 
 .answersList>input {
-    transform: scale(1.5, 1.5);
+    transform: scale(1, 1);
     display: inline-block;
     cursor: pointer;
 }
 
 .submitButton {
-    width: 10em;
+    width: 7em;
     height: 3em;
     background-color: yellow;
     padding: 0.75em 0.66em;
     font-size: 1em;
     font-family: 'EB Garamond', serif;
-    margin: 0 auto;
     position: relative;
-    left: 28%;
     top: 10%;
+    left: 34%;
     border-radius: 3px;
     border: black 0.2em solid;
     transition: background-color 0.3s linear 0s, color 0.3s linear 0s;
@@ -277,7 +275,7 @@ li>p {
 .optionsContainer {
     z-index: 500;
     display: none;
-    width: 53em;
+    width: 27.5em;
     height: 30em;
     background-color: yellow;
     text-align: center;
@@ -289,7 +287,7 @@ li>p {
     width: 7em;
     margin: 0;
     font-family: "Audiowide", "Lobster", "serif";
-    font-size: 3em;
+    font-size: 2em;
     border: black solid 0.2em;
     text-align: center;
     margin: 0 auto;
@@ -300,22 +298,20 @@ li>p {
 
 .instructionMessage {
     font-family: "Audiowide", "Lobster", "serif";
-    font-size: 2em;
+    font-size: 1em;
     text-align: center;
     position: relative;
     top: 20%;
 }
 
 .newGameButton {
-    width: 10em;
+    width: 8em;
     height: 3em;
+    margin: 9em 0em 0em 0em;
     background-color: yellow;
     padding: 0.75em 0.66em;
     font-size: 1em;
     font-family: "Audiowide", "Lobster", "serif";
-    margin: 0 auto;
-    position: relative;
-    top: 11em;
     border-radius: 3px;
     border: black 0.2em solid;
     transition: background-color 0.3s linear 0s, color 0.3s linear 0s;
@@ -329,10 +325,9 @@ li>p {
 .endContainer {
     display: none;
     border-radius: 25px;
-    position: relative;
     top: 18%;
     margin: 0 auto;
-    width: 40em;
+    width: 25em;
     height: 25em;
     background-color: black;
 }
@@ -341,11 +336,10 @@ h1 {
     color: white;
     letter-spacing: 0.09em;
     font-family: 'EB Garamond', serif;
-    font-size: 2.5em;
+    font-size: 1.5em;
     position: relative;
     top: 8%;
-    width: 15em;
-    margin: 0;
+    width: 100%;
     margin: 0 auto;
     text-align: center;
 }
@@ -353,21 +347,139 @@ h1 {
 .endContainer>p {
     font-family: 'EB Garamond', serif;
     color: white;
-    width: 25em;
+    width: 16em;
     margin: 0 auto;
     position: relative;
     top: 35%;
     text-align: center;
-    font-size: 1.5em;
+    font-size: 1em;
 }
 
 #endButton {
     position: relative;
-    top: 15em;
-    left: 15em;
+    top: 4em;
+    left: 8.5em;
 }
 
 #quizTime,
 #totalCorrectAnswers {
     font-size: 1.5em;
+}
+
+@media only screen and (min-width: 750px) {
+    .topBarCentered,
+    .contentContainer,
+    .optionsContainer {
+        width: 42.5em;
+    }
+    .questionNumber {
+        margin-right: 13em;
+    }
+    .contentContainer {
+        height: 37em;
+    }
+    .introStartGameContainer {
+        width: 35em;
+    }
+    .introMessageContainer {
+        width: 33em;
+    }
+    .startGameButton {
+        width: 10em;
+    }
+    .questionAndAnswerContainer {
+        width: 34em;
+    }
+    .questionContainer {
+        width: 25em;
+        font-size: 1.25em;
+    }
+    .endContainer {
+        width: 35em;
+        h1 {
+            font-size: 2em;
+        }
+        p {
+            font-size: 1.3em;
+        }
+        #endButton {
+            top: 4em;
+            left: 13.5em;
+        }
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .bodyContainer {
+        height: 45em;
+    }
+    .topBarCentered,
+    .contentContainer,
+    .optionsContainer {
+        width: 52.5em;
+    }
+    .topBarButtonsContainer > li {
+        width: 5em;
+    }
+    .questionNumber {
+        margin-right: 19em;
+    }
+    .contentContainer {
+        height: 42em;
+    }
+    .introStartGameContainer {
+        width: 42.5em;
+    }
+    .introMessageContainer {
+        width: 33em;
+        .introMessage {
+            font-size: 2.8em;
+        }
+    }
+    .startGameButton {
+        width: 11em;
+        height: 3.5em;
+    }
+    .questionAndAnswerContainer {
+        width: 43em;
+        height: 37em;
+    }
+    .questionContainer {
+        width: 22em;
+        font-size: 1.75em;
+    }
+    .answersList > input {
+        transform: scale(1.3, 1.3);
+    }
+    li > p {
+        font-weight: bold;
+    }
+    .endContainer {
+        width: 35em;
+        h1 {
+            font-size: 2em;
+        }
+        p {
+            font-size: 1.3em;
+        }
+        #endButton {
+            top: 4em;
+            left: 13.5em;
+        }
+    }
+    .submitButton {
+        width: 10em;
+        height: 3.5em;
+        left: 28%;
+    }
+    .optionsTitle {
+        font-size: 3em;
+    }
+    .instructionMessage {
+        font-size: 1.5em;
+    }
+    .newGameButton {
+        width: 10em;
+        height: 3.5em;
+    }
 }
