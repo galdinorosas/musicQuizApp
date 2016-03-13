@@ -14,7 +14,7 @@ input:focus {
 
 .topBarContainer {
   width: 100%;
-  background-color: black; }
+  background-color: white; }
 
 .topBarCentered {
   width: 27.5em;
@@ -85,12 +85,12 @@ ul {
   border-bottom: 0.25em solid blue; }
 
 .optionsButton:hover {
-  border-bottom: 0.25em solid yellow; }
+  border-bottom: 0.25em solid black; }
 
 .bodyContainer {
   width: 100%;
   height: 40em;
-  background-color: black; }
+  background-color: white; }
 
 .contentContainer {
   width: 27.5em;
@@ -105,21 +105,20 @@ ul {
   display: block;
   width: 25em;
   height: 20em;
-  background-color: black;
+  background-color: white;
   margin: 0 auto;
   text-align: center;
   position: relative;
   top: 10%;
   border-radius: 80px;
-  border: green 0.4em double; }
+  border: grey 0.1em solid; }
 
 .introMessageContainer {
   height: 10em;
   width: 25em;
-  background-color: black;
+  background-color: white;
   margin: 0 auto;
   margin-bottom: 2.5em;
-  border-top: black 1em solid;
   text-align: center;
   vertical-align: middle;
   line-height: 3em;
@@ -151,7 +150,7 @@ ul {
   display: none;
   width: 26em;
   height: 33em;
-  background-color: #2a58b2;
+  background-color: white;
   margin: 0 auto;
   position: relative;
   top: 4%;
@@ -161,7 +160,7 @@ ul {
   width: 22em;
   height: 6.5em;
   margin: 0 auto;
-  background: linear-gradient(#3a499e, lightblue);
+  background: linear-gradient(grey, white);
   position: relative;
   top: 4%;
   text-align: center;
@@ -213,7 +212,7 @@ li > p {
 .submitButton {
   width: 7em;
   height: 3em;
-  background-color: yellow;
+  background-color: lightgrey;
   padding: 0.75em 0.66em;
   font-size: 1em;
   font-family: 'EB Garamond', serif;
@@ -225,8 +224,8 @@ li > p {
   transition: background-color 0.3s linear 0s, color 0.3s linear 0s; }
 
 .submitButton:hover {
-  background-color: red;
-  color: yellow; }
+  background-color: green;
+  color: black; }
 
 #option4 {
   position: relative;
@@ -241,10 +240,11 @@ li > p {
   display: none;
   width: 27.5em;
   height: 30em;
-  background-color: yellow;
+  background-color: black;
   text-align: center;
   top: 3em;
-  position: absolute; }
+  position: absolute;
+  color: white; }
 
 .optionsTitle {
   width: 7em;
@@ -256,7 +256,7 @@ li > p {
   margin: 0 auto;
   position: relative;
   top: 10%;
-  color: black; }
+  color: white; }
 
 .instructionMessage {
   font-family: "Audiowide", "Lobster", "serif";
@@ -269,17 +269,18 @@ li > p {
   width: 8em;
   height: 3em;
   margin: 9em 0em 0em 0em;
-  background-color: yellow;
+  background-color: lightgrey;
   padding: 0.75em 0.66em;
   font-size: 1em;
   font-family: "Audiowide", "Lobster", "serif";
   border-radius: 3px;
   border: black 0.2em solid;
-  transition: background-color 0.3s linear 0s, color 0.3s linear 0s; }
+  transition: background-color 0.3s linear 0s, color 0.3s linear 0s;
+  color: black; }
 
 .newGameButton:hover {
   background-color: red;
-  color: yellow; }
+  color: white; }
 
 .endContainer {
   display: none;
