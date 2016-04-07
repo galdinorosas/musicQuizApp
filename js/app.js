@@ -190,7 +190,7 @@ $(document).ready(function() {
 
     // This is the new game button functionality. Resets all values to the original settings and displays the intro container.
 
-    $(".newGameButton").on("click", function() {
+    $(".newGameButton, .optionsNewGameButton").on("click", function() {
         $(".timer").runner("reset", true);
         quizLength = 0;
 

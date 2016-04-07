@@ -3,11 +3,13 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <!--   Links to css files for better cross-browser compatibility normalized styles.  -->
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="public/css/styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link defer href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet' type='text/css'>
     <link defer href='https://fonts.googleapis.com/css?family=Lobster+Two:400,700' rel='stylesheet' type='text/css'>
     <link defer href='https://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
@@ -17,38 +19,42 @@
 </head>
 
 <body>
-    <div class="topBarContainer">
-        <div class="topBarCentered">
-            <div class="questionNumber">
+    <nav class="navbar navbar-default navbar-fixed-top topBarCentered">
+        <div class="row">
+            <div class="col-xs-4">
                 <p class="currentQuestion">Q. <span id="currentQuestionNumber">#</span></p>
             </div>
             <!-- Stopwatch for the time length to finish quiz. This stopwatch is meant to pause when the user clicks on the options button. -->
-            <div class="timeLength">
-                <p class="timer">00:00:00</p>
+            <div class="col-xs-4">
+                <div class="timeLength">
+                    <p class="timer">00:00:00</p>
+                </div>
             </div>
-            <ul class="topBarButtonsContainer">
-                <!-- The play button will play any currently playing paused song. -->
-                <li class="firstItem">
-                    <button type="button" class="playButton">
-                        <img class="playImage" src="Images/play.svg">
-                    </button>
-                </li>
-                <!-- The pause button will pause any currently playing song. -->
-                <li class="secondItem">
-                    <button type="button" class="pauseButton">
-                        <img class="pauseImage" src="Images/pause.svg">
-                    </button>
-                </li>
-                <!-- The options button will have a fade in/out screen, where the user will have the choice to start a new game with a button. -->
-                <li class="thirdItem">
-                    <button type="button" class="optionsButton">
-                        <img class="optionsImage" src="Images/options.svg">
-                    </button>
-                </li>
-            </ul>
+            <div class="col-xs-4">
+                <ul class="topBarButtonsContainer">
+                    <!-- The play button will play any currently playing paused song. -->
+                    <li class="firstItem">
+                        <button type="button" class="playButton">
+                            <img class="playImage" src="Images/play.svg">
+                        </button>
+                    </li>
+                    <!-- The pause button will pause any currently playing song. -->
+                    <li class="secondItem">
+                        <button type="button" class="pauseButton">
+                            <img class="pauseImage" src="Images/pause.svg">
+                        </button>
+                    </li>
+                    <!-- The options button will have a fade in/out screen, where the user will have the choice to start a new game with a button. -->
+                    <li class="thirdItem">
+                        <button type="button" class="optionsButton">
+                            <img class="optionsImage" src="Images/options.svg">
+                        </button>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
-    <div class="bodyContainer">
+    </nav>
+    <div class="container-fluid">
         <div class="contentContainer">
             <!-- The intro screen/message when the page is first loaded. Includes the start game button, which will lead to the questions. -->
             <div class="introStartGameContainer">
@@ -107,14 +113,14 @@
                     <br />
                     <br /> *Play/Pause: Click on the play and pause buttons at the top of the page to stop the current song from playing.
                 </p>
-                <button type="button" class="newGameButton">
+                <button type="button" class="optionsNewGameButton">
                     NEW GAME
                 </button>
             </div>
             <div class="endContainer">
                 <h1 class="endIntro">CONGRATULATIONS!</h1>
                 <p> Your total quiz time was <span id="quizTime"></span> with <span id="totalCorrectAnswers">#/5</span> questions correct.</p>
-                <button type="button" id="endButton" class="newGameButton">
+                <button type="button" class="newGameButton">
                     NEW GAME
                 </button>
             </div>
