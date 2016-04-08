@@ -7,7 +7,7 @@ input:focus {
   src: url(digital-7.regular.ttf); }
 
 html {
-  background: url("../images/background-s.jpg") no-repeat center center fixed;
+  background: url("../Images/background-s.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -276,7 +276,7 @@ li > p {
 
 @media only screen and (min-width: 500px) {
   html {
-    background: url("../images/background-m.jpg") no-repeat center center fixed; }
+    background: url("../Images/background-m.jpg") no-repeat center center fixed; }
   nav.navbar .timer,
   nav.navbar .currentQuestion {
     font-size: 2em;
@@ -390,7 +390,7 @@ li > p {
 
 @media only screen and (min-width: 1000px) {
   html {
-    background: url("../images/background-l.jpg") no-repeat center center fixed;
+    background: url("../Images/background-l.jpg") no-repeat center center fixed;
     background-position: 0% 80%; }
   nav.navbar .timer,
   nav.navbar .currentQuestion {

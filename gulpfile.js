@@ -112,9 +112,9 @@ gulp.task('scripts', function() {
 
 // Image optimization task
 gulp.task('images', function() {
-    return gulp.src('images/*')
+    return gulp.src('Images/*')
         .pipe(imagemin())
-        .pipe(gulp.dest('public/images'));
+        .pipe(gulp.dest('public/Images'));
 });
 
 // Build task
