@@ -1,0 +1,533 @@
+button:focus,input:focus {
+	outline: 0;
+}
+@font-face {
+	font-family: "digital";
+	src: url(digital-7.regular.ttf);
+}
+html {
+	background: url("../images/background-s.jpg") no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+html body {
+	background-color: transparent;
+}
+nav.navbar {
+	min-height: 0;
+	border: 0;
+	margin: 0 auto;
+}
+nav.navbar p {
+	margin: 0;
+}
+nav.navbar .timer,nav.navbar .currentQuestion {
+	font-family: "digital", "monospace", "serif";
+	font-size: 1.5em;
+	padding-top: 0.5em;
+}
+nav.navbar .timer {
+	width: 3em;
+	display: block;
+	margin: 0 auto;
+}
+nav.navbar .topBarButtonsContainer {
+	list-style-type: none;
+	border: 0;
+	padding: 0;
+	float: right;
+	margin: 0 0.25em 0 -4em;
+}
+nav.navbar .topBarButtonsContainer li {
+	height: 3em;
+	width: 2.4em;
+	display: inline-block;
+}
+nav.navbar div.col-xs-4,nav.navbar div.col-xs-2 {
+	padding-left: 2.5em;
+}
+.playImage,.pauseImage,.optionsImage {
+	height: 2em;
+}
+.playButton,.pauseButton,.optionsButton {
+	height: 100%;
+	width: 100%;
+	border: 0;
+	padding: 0;
+	background-color: transparent;
+	border-bottom: 0.25em solid transparent;
+	transition: border 0.3s linear 0s;
+}
+.playButton:hover {
+	border-bottom: 0.25em solid red;
+}
+.pauseButton:hover {
+	border-bottom: 0.25em solid blue;
+}
+.optionsButton:hover {
+	border-bottom: 0.25em solid black;
+}
+div.container-fluid {
+	padding: 0;
+}
+.contentContainer .introStartGameContainer {
+	z-index: 100;
+	display: block;
+	height: 20em;
+	margin: 0 auto;
+	text-align: center;
+}
+.contentContainer .introStartGameContainer .introMessageContainer {
+	height: 10em;
+	margin: 10em auto;
+	margin-bottom: 2.5em;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 3em;
+	border-radius: 75px;
+}
+.contentContainer .introStartGameContainer .introMessageContainer .introMessage {
+	color: white;
+	font-family: "Audiowide", "Lobster", "serif";
+	font-size: 2em;
+	position: relative;
+	top: 20%;
+}
+.contentContainer .introStartGameContainer .startGameButton {
+	width: 10em;
+	height: 3em;
+	background-color: white;
+	border: 0;
+	font-size: 0.75em;
+	font-family: "Audiowide", "Lobster", "serif";
+	border-radius: 3px;
+	margin-top: 7em;
+	transition: background-color 0.3s linear 0s, color 0.3s linear 0s;
+}
+.contentContainer .introStartGameContainer .startGameButton:hover {
+	background-color: blue;
+	color: white;
+}
+.contentContainer .questionAndAnswerContainer {
+	display: none;
+	margin: 8em auto;
+}
+.contentContainer .questionAndAnswerContainer .questionContainer {
+	width: 20.5em;
+	height: 6.5em;
+	margin: 2em auto;
+	background: linear-gradient(grey, white);
+	position: relative;
+	top: 4%;
+	text-align: center;
+	font-size: 1em;
+	border-radius: 40px;
+}
+.contentContainer .questionAndAnswerContainer .questionContainer p {
+	line-height: 170%;
+	position: relative;
+	top: 26%;
+	padding: 0em 0.75em;
+	font-family: 'EB Garamond', serif;
+	letter-spacing: 0.2px;
+}
+.contentContainer .questionAndAnswerContainer .inputContainer {
+	margin: 0 auto;
+}
+.contentContainer .questionAndAnswerContainer .inputContainer .userInput {
+	height: 15em;
+	display: block;
+	margin: 0 auto;
+	width: 20em;
+}
+.contentContainer .questionAndAnswerContainer .inputContainer .userInput .answersList {
+	width: 12em;
+	display: block;
+	margin: 0 auto;
+}
+.contentContainer .questionAndAnswerContainer .inputContainer .userInput .answersList li {
+	display: inline-block;
+	width: 15em;
+	height: 2.5em;
+	background-color: white;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 2.5em;
+	margin: 0.5em 0 1em 2em;
+	border-radius: 40px;
+	cursor: pointer;
+	font-size: 0.6em;
+}
+.contentContainer .questionAndAnswerContainer .inputContainer .userInput .answersList input {
+	transform: scale(1, 1);
+	display: inline-block;
+	cursor: pointer;
+}
+.contentContainer .questionAndAnswerContainer .inputContainer .userInput .answersList input[type="radio"] {
+	margin-bottom: 2em;
+}
+.contentContainer .questionAndAnswerContainer .inputContainer .userInput .submitButton {
+	width: 8em;
+	height: 2.5em;
+	display: block;
+	margin: 2em auto;
+	font-size: 0.75em;
+	background-color: lightgrey;
+	font-family: 'EB Garamond', serif;
+	position: relative;
+	border-radius: 3px;
+	border: black 0.2em solid;
+	transition: background-color 0.3s linear 0s, color 0.3s linear 0s;
+}
+.contentContainer .questionAndAnswerContainer .inputContainer .userInput .submitButton:hover {
+	background-color: blue;
+	color: white;
+}
+.contentContainer .optionsContainer {
+	z-index: 500;
+	display: none;
+	height: 75%;
+	background-color: black;
+	text-align: center;
+	top: 3em;
+	position: absolute;
+	color: white;
+}
+.contentContainer .optionsContainer .optionsTitle {
+	width: 7em;
+	margin: 0;
+	font-family: "Audiowide", "Lobster", "serif";
+	font-size: 2em;
+	border: black solid 0.2em;
+	text-align: center;
+	margin: 0 auto;
+	position: relative;
+	top: 10%;
+	color: white;
+}
+.contentContainer .optionsContainer .instructionMessage {
+	font-family: "Audiowide", "Lobster", "serif";
+	font-size: 0.9em;
+	text-align: center;
+	position: relative;
+	top: 20%;
+}
+.contentContainer .optionsContainer .optionsNewGameButton {
+	display: block;
+	width: 8em;
+	height: 3em;
+	margin: 0 auto;
+	font-size: 0.75em;
+	margin-top: 12em;
+	background-color: lightgrey;
+	font-family: "Audiowide", "Lobster", "serif";
+	border-radius: 3px;
+	border: black 0.2em solid;
+	transition: background-color 0.3s linear 0s, color 0.3s linear 0s;
+	color: black;
+}
+.contentContainer .optionsContainer .optionsNewGameButton:hover {
+	background-color: red;
+	color: white;
+}
+.contentContainer .endContainer {
+	display: none;
+	border-radius: 25px;
+	margin: 0 auto;
+	margin-top: 10em;
+	background-color: black;
+	height: 25em;
+	width: 20em;
+}
+.contentContainer .endContainer h1 {
+	color: white;
+	font-size: 1.5em;
+	letter-spacing: 0.09em;
+	font-family: 'EB Garamond', serif;
+	position: relative;
+	top: 25%;
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+}
+.contentContainer .endContainer p {
+	font-family: 'EB Garamond', serif;
+	color: white;
+	width: 16em;
+	margin: 0 auto;
+	position: relative;
+	top: 35%;
+	text-align: center;
+	font-size: 1em;
+}
+.contentContainer .endContainer #quizTime,.contentContainer .endContainer #totalCorrectAnswers {
+	font-size: 1.5em;
+}
+.contentContainer .endContainer .newGameButton {
+	display: block;
+	width: 8em;
+	height: 2.5em;
+	margin: 0 auto;
+	font-size: 0.8em;
+	margin-top: 15em;
+	background-color: lightgrey;
+	font-family: "Audiowide", "Lobster", "serif";
+	border-radius: 3px;
+	border: black 0.2em solid;
+	transition: background-color 0.3s linear 0s, color 0.3s linear 0s;
+	color: black;
+}
+.contentContainer .endContainer .newGameButton:hover {
+	background-color: red;
+	color: white;
+}
+li > p {
+	color: #000000;
+	font-family: 'EB Garamond', serif;
+	letter-spacing: 0.5px;
+}
+#option4 {
+	position: relative;
+	bottom: 7%;
+}
+#option3 {
+	position: relative;
+	bottom: 6.5%;
+}
+
+@media only screen and (min-width: 500px) {
+
+	html {
+		background: url("../images/background-m.jpg") no-repeat center center fixed;
+	}
+	nav.navbar .timer,nav.navbar .currentQuestion {
+		font-size: 2em;
+		padding-top: 0.4em;
+	}
+	nav.navbar .topBarButtonsContainer li {
+		height: 4em;
+		width: 3.5em;
+		display: inline-block;
+	}
+	nav.navbar div.col-xs-4,nav.navbar div.col-xs-2 {
+		padding-left: 2.5em;
+	}
+	.playImage,.pauseImage,.optionsImage {
+		height: 2.25em;
+	}
+	.contentContainer .introStartGameContainer .introMessageContainer .introMessage {
+		font-size: 3em;
+	}
+	.contentContainer .introStartGameContainer .startGameButton {
+		font-size: 1.2em;
+		margin-top: 3em;
+	}
+	.contentContainer .questionAndAnswerContainer .questionContainer {
+		width: 30em;
+		height: 8em;
+	}
+	.contentContainer .questionAndAnswerContainer .questionContainer p {
+		font-size: 1.3em;
+	}
+	.contentContainer .questionAndAnswerContainer .inputContainer .userInput {
+		width: 100%;
+	}
+	.contentContainer .questionAndAnswerContainer .inputContainer .userInput .answersList {
+		width: 16em;
+		display: block;
+		margin: 0 auto;
+		margin-bottom: 1em;
+	}
+	.contentContainer .questionAndAnswerContainer .inputContainer .userInput .answersList li {
+		width: 16em;
+		margin: 0em 0 1em 2em;
+		font-size: 0.8em;
+	}
+	.contentContainer .questionAndAnswerContainer .inputContainer .userInput .submitButton {
+		font-size: 0.9em;
+	}
+	.contentContainer .optionsContainer .optionsTitle {
+		font-size: 3em;
+	}
+	.contentContainer .optionsContainer .instructionMessage {
+		font-size: 1.2em;
+	}
+	.contentContainer .optionsContainer .optionsNewGameButton {
+		width: 10em;
+		height: 3.5em;
+	}
+	.contentContainer .endContainer {
+		width: 30em;
+		height: 30em;
+	}
+	.contentContainer .endContainer h1 {
+		font-size: 2em;
+	}
+	.contentContainer .endContainer p {
+		font-size: 1.25em;
+	}
+}
+
+
+@media only screen and (min-width: 750px) {
+
+	nav.navbar .timer,nav.navbar .currentQuestion {
+		font-size: 2.2em;
+	}
+	nav.navbar .topBarButtonsContainer li {
+		width: 4em;
+	}
+	.playImage,.pauseImage,.optionsImage {
+		height: 2.5em;
+	}
+	.contentContainer .introStartGameContainer .introMessageContainer .introMessage {
+		font-size: 3.25em;
+		line-height: 1.25em;
+		padding-left: 1em;
+		padding-right: 1em;
+	}
+	.contentContainer .introStartGameContainer .startGameButton {
+		font-size: 1.3em;
+		margin-top: 4em;
+		width: 11em;
+		height: 3.25em;
+	}
+	.contentContainer .questionAndAnswerContainer .questionContainer {
+		margin-top: -2em;
+		margin-bottom: 2em;
+		width: 40em;
+		height: 9em;
+	}
+	.contentContainer .questionAndAnswerContainer .questionContainer p {
+		font-size: 1.6em;
+	}
+	.contentContainer .questionAndAnswerContainer .inputContainer .userInput {
+		width: 100%;
+	}
+	.contentContainer .questionAndAnswerContainer .inputContainer .userInput .answersList {
+		width: 20em;
+		display: block;
+		margin: 0 auto;
+		margin-bottom: 0.5em;
+	}
+	.contentContainer .questionAndAnswerContainer .inputContainer .userInput .answersList li {
+		width: 16em;
+		margin: 0.5em 0 1em 2em;
+		font-size: 1em;
+	}
+	.contentContainer .questionAndAnswerContainer .inputContainer .userInput .submitButton {
+		font-size: 1em;
+	}
+	.contentContainer .optionsContainer .optionsTitle {
+		font-size: 3em;
+	}
+	.contentContainer .optionsContainer .instructionMessage {
+		font-size: 1.4em;
+	}
+	.contentContainer .optionsContainer .optionsNewGameButton {
+		width: 10em;
+		height: 3.5em;
+	}
+	.contentContainer .endContainer {
+		width: 40em;
+		height: 27em;
+		margin-top: 8em;
+	}
+	.contentContainer .endContainer h1 {
+		font-size: 2em;
+	}
+	.contentContainer .endContainer p {
+		font-size: 1.25em;
+	}
+	.contentContainer .endContainer .newGameButton {
+		margin-top: 17em;
+	}
+}
+
+
+@media only screen and (min-width: 1000px) {
+
+	html {
+		background: url("../images/background-l.jpg") no-repeat center center fixed;
+		background-position: 0% 80%;
+	}
+	nav.navbar .timer,nav.navbar .currentQuestion {
+		font-size: 2.2em;
+	}
+	nav.navbar .topBarButtonsContainer li {
+		width: 4em;
+	}
+	.playImage,.pauseImage,.optionsImage {
+		height: 2.5em;
+	}
+	.contentContainer .introStartGameContainer .introMessageContainer .introMessage {
+		font-size: 3.25em;
+		line-height: 1.25em;
+		padding-left: 1em;
+		padding-right: 1em;
+	}
+	.contentContainer .introStartGameContainer .startGameButton {
+		font-size: 1.3em;
+		margin-top: 4em;
+		width: 11em;
+		height: 3.25em;
+	}
+	.contentContainer .questionAndAnswerContainer .questionContainer {
+		margin-top: -2em;
+		margin-bottom: 2em;
+		width: 45em;
+		height: 10em;
+	}
+	.contentContainer .questionAndAnswerContainer .questionContainer p {
+		font-size: 1.8em;
+	}
+	.contentContainer .questionAndAnswerContainer .inputContainer .userInput {
+		width: 100%;
+	}
+	.contentContainer .questionAndAnswerContainer .inputContainer .userInput .answersList {
+		width: 20em;
+		display: block;
+		margin: 0 auto;
+		margin-bottom: 0.5em;
+	}
+	.contentContainer .questionAndAnswerContainer .inputContainer .userInput .answersList li {
+		width: 16em;
+		margin: 0.5em 0 1em 2em;
+		font-size: 1em;
+	}
+	.contentContainer .questionAndAnswerContainer .inputContainer .userInput .submitButton {
+		font-size: 1em;
+	}
+	.contentContainer .optionsContainer {
+		height: 85%;
+	}
+	.contentContainer .optionsContainer .optionsTitle {
+		font-size: 4em;
+	}
+	.contentContainer .optionsContainer .instructionMessage {
+		font-size: 1.8em;
+	}
+	.contentContainer .optionsContainer .optionsNewGameButton {
+		width: 10em;
+		height: 3.5em;
+		font-size: 1em;
+		margin-top: 10em;
+	}
+	.contentContainer .endContainer {
+		width: 40em;
+		height: 27em;
+		margin-top: 8em;
+	}
+	.contentContainer .endContainer h1 {
+		font-size: 2em;
+	}
+	.contentContainer .endContainer p {
+		font-size: 1.25em;
+	}
+	.contentContainer .endContainer .newGameButton {
+		margin-top: 17em;
+	}
+}
+

@@ -8,14 +8,11 @@
     <!--   Links to css files for better cross-browser compatibility normalized styles.  -->
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="public/css/styles.css">
+    <link rel="stylesheet" href="public/css/purgedStyles.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link defer href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet' type='text/css'>
     <link defer href='https://fonts.googleapis.com/css?family=Lobster+Two:400,700' rel='stylesheet' type='text/css'>
     <link defer href='https://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
-    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script defer src="js/app.js"></script>
-    <script defer src="js/jquery.runner-min.js" type="text/javascript"></script>
 </head>
 
 <body>
@@ -35,19 +32,19 @@
                     <!-- The play button will play any currently playing paused song. -->
                     <li class="firstItem">
                         <button type="button" class="playButton">
-                            <img class="playImage" src="Images/play.svg">
+                            <img class="playImage" src="images/play.svg">
                         </button>
                     </li>
                     <!-- The pause button will pause any currently playing song. -->
                     <li class="secondItem">
                         <button type="button" class="pauseButton">
-                            <img class="pauseImage" src="Images/pause.svg">
+                            <img class="pauseImage" src="images/pause.svg">
                         </button>
                     </li>
                     <!-- The options button will have a fade in/out screen, where the user will have the choice to start a new game with a button. -->
                     <li class="thirdItem">
                         <button type="button" class="optionsButton">
-                            <img class="optionsImage" src="Images/options.svg">
+                            <img class="optionsImage" src="images/options.svg">
                         </button>
                     </li>
                 </ul>
@@ -94,7 +91,7 @@
                                 <p class="text4">Answer4</p>
                             </li>
                         </ul>
-                        <button type="button" class="submitButton">
+                        <button type="button" class="submitButton" data-toggle="tooltip" data-placement="right" title="Click An Answer Before Submit">
                             Submit
                         </button>
                     </form>
@@ -128,6 +125,10 @@
         <!-- adjust src of audio file through javascript, for faster load times. -->
         <audio id="songPlaying" src="">
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/jquery.runner-min.js" type="text/javascript"></script>
 </body>
 
 </html>

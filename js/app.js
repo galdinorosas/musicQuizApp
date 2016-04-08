@@ -7,6 +7,8 @@ $(document).ready(function() {
 
     $(".timer").runner();
 
+    $('.submitButton').tooltip();
+
     var questionsAndAnswers = [{
         "question": "Which alternative artist made the song Reptilia?",
         "optionOne": "Franz Ferdinand",
